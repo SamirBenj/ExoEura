@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css carré</title>
+  </head>
+  <body>
+    <div id="mysquare"></div>
+  </body>
+</html>
+
+<script>
+  setInterval(changeColor, 1000);
+  function changeColor() {
+    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.getElementById("mysquare").style.backgroundColor =
+      "#" + randomColor;
+  }
+</script>
+<style>
+  div {
+    background-color: #d61212;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    animation: rotation 1s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
